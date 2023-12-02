@@ -23,5 +23,11 @@ pipeline {
         sh 'docker compose build'
       }
     }
+
+    stage('Running the App') {
+      steps {
+        sh 'docker compose up -d'
+      }
+    }
   }
 }
