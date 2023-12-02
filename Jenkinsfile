@@ -11,13 +11,10 @@ pipeline {
         sh 'npm i'
       }
     }
+
     stage('Test') {
       steps {
-        echo 'E2E Tests'
-        sh 'npm run test:e2e'
-
-        echo 'CI Tests'
-        sh 'npm run test:ci'
+        sh 'npm run test'
       }
     }
   }
