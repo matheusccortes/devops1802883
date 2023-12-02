@@ -13,7 +13,11 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'npm test'
+        echo 'E2E Tests'
+        sh 'npm run test:e2e'
+
+        echo 'CI Tests'
+        sh 'npm run test:ci'
       }
     }
   }
